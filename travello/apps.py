@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class TeluskoConfig(AppConfig):
-    name = 'Telusko'
+    name = 'travello'
