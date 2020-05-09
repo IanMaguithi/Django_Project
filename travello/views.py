@@ -1,9 +1,14 @@
 from django.shortcuts import render
+from .models import Destination
 
 
 # Create your views here.
 def home(request):
-    return render(request, 'travello/index.html')
+    dests = Destination.objects.all()
+    context_dict = {
+        'dests': dests
+    }
+    return render(request, 'travello/index.html', context=context_dict)
 
 
 def about(request):
