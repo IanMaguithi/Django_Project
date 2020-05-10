@@ -8,3 +8,6 @@ class Destination(models.Model):
     description = models.TextField()
     price = models.IntegerField(default=0)
     offer = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.name
