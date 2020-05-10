@@ -53,6 +53,12 @@ def login(request):
 
         else:
             messages.error(request, 'Invalid Credentials')
+            return redirect('login')
 
     else:
         return render(request, 'registration/login.html')
+
+
+def logout(request):
+    auth.logout(request)
+    return redirect('/')
